@@ -1,0 +1,44 @@
+@import 'leaflet/dist/leaflet.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: #181a1b;
+  color: #f3f3f3;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* Transparent grey button style */
+.wallet-adapter-button,
+button,
+.btn,
+.daisy-btn {
+  background: rgba(80, 80, 80, 0.4) !important;
+  color: #f3f3f3 !important;
+  border: 1px solid rgba(120,120,120,0.2) !important;
+  backdrop-filter: blur(2px);
+  transition: background 0.2s;
+}
+.wallet-adapter-button:not([disabled]):hover,
+button:hover,
+.btn:hover,
+.daisy-btn:hover {
+  background: rgba(120, 120, 120, 0.6) !important;
+}
+
