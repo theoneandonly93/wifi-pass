@@ -25,18 +25,18 @@ export const AppBar: FC = () => {
 
       {/* Center: Text Tabs (hidden on small screens) */}
       <div className="flex-1 justify-center items-center gap-4 sm:gap-6 hidden sm:flex">
-        <a
-          href="#"
+        <Link
+          href="/mywifipass"
           className="px-3 py-1 rounded-lg bg-gray-200 bg-opacity-20 text-gray-700 hover:bg-gray-300 hover:bg-opacity-30 text-base font-semibold tracking-wide transition-all duration-150 whitespace-nowrap"
         >
           MyWifiPass
-        </a>
-        <a
-          href="#"
+        </Link>
+        <Link
+          href="/myrewards"
           className="px-3 py-1 rounded-lg bg-gray-200 bg-opacity-20 text-gray-700 hover:bg-gray-300 hover:bg-opacity-30 text-base font-semibold tracking-wide transition-all duration-150 whitespace-nowrap"
         >
           MyRewards
-        </a>
+        </Link>
         <a
           href="#"
           className="px-3 py-1 rounded-lg bg-gray-200 bg-opacity-20 text-gray-700 hover:bg-gray-300 hover:bg-opacity-30 text-base font-semibold tracking-wide transition-all duration-150 whitespace-nowrap"
@@ -105,20 +105,20 @@ export const AppBar: FC = () => {
                 Rewards
               </a>
               <hr className="w-3/4 border-zinc-700 my-2" />
-              <a
+              <Link
                 className="w-full py-2 text-base font-semibold rounded-xl text-gray-700 bg-gray-200 bg-opacity-20 hover:bg-gray-300 hover:bg-opacity-30 text-center transition-all duration-150 whitespace-nowrap"
-                href="#"
+                href="/mywifipass"
                 onClick={() => setIsNavOpen(false)}
               >
                 MyWifiPass
-              </a>
-              <a
+              </Link>
+              <Link
                 className="w-full py-2 text-base font-semibold rounded-xl text-gray-700 bg-gray-200 bg-opacity-20 hover:bg-gray-300 hover:bg-opacity-30 text-center transition-all duration-150 whitespace-nowrap"
-                href="#"
+                href="/myrewards"
                 onClick={() => setIsNavOpen(false)}
               >
                 MyRewards
-              </a>
+              </Link>
               <a
                 className="w-full py-2 text-base font-semibold rounded-xl text-gray-700 bg-gray-200 bg-opacity-20 hover:bg-gray-300 hover:bg-opacity-30 text-center transition-all duration-150 whitespace-nowrap"
                 href="#"

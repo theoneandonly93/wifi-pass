@@ -65,32 +65,36 @@ export default function Passes() {
   }, [connected, router]);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-[#181a1b]">
-      <h2 className="text-6xl font-extrabold mb-8 text-white tracking-widest">Dopleganga Passes</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl">
+    <div className="flex flex-col items-center justify-start min-h-screen p-2 sm:p-4 bg-[#181a1b] overflow-x-hidden overflow-y-auto">
+      <h2 className="text-4xl sm:text-6xl font-extrabold mb-4 sm:mb-8 text-white tracking-widest text-center w-full">Dopleganga Passes</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8 w-full max-w-5xl">
         {passes.map((pass) => (
-          <div key={pass.type} className="bg-black bg-opacity-90 shadow-2xl rounded-3xl p-12 flex flex-col items-center">
-            <span className="text-2xl font-bold mb-2 text-white">{pass.type}</span>
-            <span className="mb-2 text-gray-400">{pass.duration}</span>
-            <span className="mb-1 text-lg text-gray-300 font-bold">{pass.price} SOL</span>
-            <span className="mb-6 text-xs text-gray-400">(~${(pass.price * SOL_TO_USD).toFixed(2)} USD)</span>
+          <div
+            key={pass.type}
+            className="bg-black bg-opacity-60 sm:bg-opacity-80 shadow-xl sm:shadow-2xl rounded-2xl sm:rounded-3xl p-4 sm:p-8 flex flex-col items-center backdrop-blur-md border border-white border-opacity-10"
+            style={{ minWidth: 0, maxWidth: '100%', transition: 'all 0.2s', boxShadow: '0 2px 16px 0 rgba(0,0,0,0.25)' }}
+          >
+            <span className="text-lg sm:text-2xl font-bold mb-1 sm:mb-2 text-white">{pass.type}</span>
+            <span className="mb-1 sm:mb-2 text-gray-400 text-xs sm:text-base">{pass.duration}</span>
+            <span className="mb-1 text-base sm:text-lg text-gray-300 font-bold">{pass.price} SOL</span>
+            <span className="mb-3 sm:mb-6 text-xs text-gray-400">(~${(pass.price * SOL_TO_USD).toFixed(2)} USD)</span>
             {connected ? (
-              <div className="flex flex-col gap-2 w-full mt-4">
+              <div className="flex flex-col gap-2 w-full mt-2 sm:mt-4">
                 <button
-                  className="px-6 py-2 rounded-lg font-semibold bg-gray-700 bg-opacity-60 text-white hover:bg-gray-600 transition shadow-md"
+                  className="px-3 sm:px-6 py-1.5 sm:py-2 rounded-lg font-semibold bg-gray-700 bg-opacity-60 text-white hover:bg-gray-600 transition shadow-md text-xs sm:text-base"
                   onClick={() => handleBuy(pass.type)}
                 >
                   Buy
                 </button>
                 <button
-                  className="px-6 py-2 rounded-lg font-semibold bg-blue-700 bg-opacity-80 text-white hover:bg-blue-800 transition shadow-md"
+                  className="px-3 sm:px-6 py-1.5 sm:py-2 rounded-lg font-semibold bg-blue-700 bg-opacity-80 text-white hover:bg-blue-800 transition shadow-md text-xs sm:text-base"
                   onClick={() => handleActivate(pass.type)}
                 >
                   Activate
                 </button>
               </div>
             ) : (
-              <span className="text-gray-500">Connect wallet to buy</span>
+              <span className="text-gray-500 text-xs sm:text-base">Connect wallet to buy</span>
             )}
           </div>
         ))}
