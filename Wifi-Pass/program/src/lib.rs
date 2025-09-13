@@ -1,9 +1,7 @@
 use anchor_lang::prelude::*;
 
-// Program ID: Replace with your deployed program ID
-// declare_id!("YourProgramIdHere");
-
-declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkgMQoezjZ8h1");
+// Program ID: Mainnet deployment
+declare_id!("Ez6HvSNSd8kNrQLypWKaV694bkSeh9MjYWtWu6RYiftb");
 
 #[program]
 pub mod wifi_pass {

@@ -7,7 +7,7 @@ skip-lint = false
 # wifi_pass = "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkgMQoezjZ8h1"
 
 [programs.mainnet]
-wifi_pass = "REPLACE_WITH_MAINNET_PROGRAM_ID"
+wifi_pass = "Ez6HvSNSd8kNrQLypWKaV694bkSeh9MjYWtWu6RYiftb"
 
 [registry]
 url = "https://api.apr.dev"
