@@ -6,10 +6,10 @@ const Basics: NextPage = (props) => {
   return (
     <div>
       <Head>
-        <title>Dopleganga Basics</title>
+        <title>Dopelganga Basics</title>
         <meta
           name="description"
-          content="Basic Functionality for Dopleganga Wireless Platform"
+          content="Basic Functionality for Dopelganga Wireless Platform"
         />
       </Head>
       <BasicsView />

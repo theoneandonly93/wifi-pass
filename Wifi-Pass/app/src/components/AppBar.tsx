@@ -17,19 +17,31 @@ export const AppBar: FC = () => {
       {/* Left: Logo */}
       <div className="navbar-start flex items-center gap-2">
         <Link href="/" className="flex items-center">
-          <img src="/solanaLogo.png" alt="Dopleganga Logo" className="h-10 w-10 mr-2" />
-          <span className="text-white text-2xl font-bold tracking-widest hidden sm:inline">Dopleganga</span>
-        </Link>
-      </div>
+          <img src="/solanaLogo.png" alt="Dopelganga Logo" className="h-10 w-10 mr-2" />
+          <span className="text-white text-2xl font-bold tracking-widest hidden sm:inline">Dopelganga</span>
+      </Link>
+    </div>
 
 
       {/* Center: Text Tabs (hidden on small screens) */}
       <div className="flex-1 justify-center items-center gap-4 sm:gap-6 hidden sm:flex">
         <Link
-          href="/mywifipass"
+          href="/coverage"
           className="px-3 py-1 rounded-lg bg-gray-200 bg-opacity-20 text-gray-700 hover:bg-gray-300 hover:bg-opacity-30 text-base font-semibold tracking-wide transition-all duration-150 whitespace-nowrap"
         >
-          MyWifiPass
+          Coverage
+        </Link>
+        <Link
+          href="/hotspots"
+          className="px-3 py-1 rounded-lg bg-gray-200 bg-opacity-20 text-gray-700 hover:bg-gray-300 hover:bg-opacity-30 text-base font-semibold tracking-wide transition-all duration-150 whitespace-nowrap"
+        >
+          Hotspots
+        </Link>
+        <Link
+          href="/passes"
+          className="px-3 py-1 rounded-lg bg-gray-200 bg-opacity-20 text-gray-700 hover:bg-gray-300 hover:bg-opacity-30 text-base font-semibold tracking-wide transition-all duration-150 whitespace-nowrap"
+        >
+          Plans
         </Link>
         <Link
           href="/myrewards"
@@ -37,12 +49,18 @@ export const AppBar: FC = () => {
         >
           MyRewards
         </Link>
-        <a
-          href="#"
+        <Link
+          href="/mywifipass"
           className="px-3 py-1 rounded-lg bg-gray-200 bg-opacity-20 text-gray-700 hover:bg-gray-300 hover:bg-opacity-30 text-base font-semibold tracking-wide transition-all duration-150 whitespace-nowrap"
         >
-          MyGSim
-        </a>
+          MyWifiPass
+        </Link>
+        <Link
+          href="/provision"
+          className="px-3 py-1 rounded-lg bg-gray-200 bg-opacity-20 text-gray-700 hover:bg-gray-300 hover:bg-opacity-30 text-base font-semibold tracking-wide transition-all duration-150 whitespace-nowrap"
+        >
+          Provisioning
+        </Link>
       </div>
 
       {/* Right: Wallet + Hamburger */}
@@ -76,27 +94,27 @@ export const AppBar: FC = () => {
               &times;
             </button>
             <nav className="flex flex-col w-full items-center gap-3">
+              <Link
+                className="w-full py-2 text-lg font-semibold rounded-xl text-gray-200 bg-[#23272a] hover:bg-[#2d2f31] text-center transition-all duration-150"
+                href="/coverage"
+                onClick={() => setIsNavOpen(false)}
+              >
+                Coverage
+              </Link>
               <a
                 className="w-full py-2 text-lg font-semibold rounded-xl text-gray-200 bg-[#23272a] hover:bg-[#2d2f31] text-center transition-all duration-150"
                 href="#"
                 onClick={() => setIsNavOpen(false)}
               >
-                Find a HotSpot
+                Mobile (Expo)
               </a>
-              <a
+              <Link
                 className="w-full py-2 text-lg font-semibold rounded-xl text-gray-200 bg-[#23272a] hover:bg-[#2d2f31] text-center transition-all duration-150"
-                href="#"
+                href="/passes"
                 onClick={() => setIsNavOpen(false)}
               >
-                Mobile
-              </a>
-              <a
-                className="w-full py-2 text-lg font-semibold rounded-xl text-gray-200 bg-[#23272a] hover:bg-[#2d2f31] text-center transition-all duration-150"
-                href="#"
-                onClick={() => setIsNavOpen(false)}
-              >
-                Build Your Plan
-              </a>
+                Plans
+              </Link>
               <a
                 className="w-full py-2 text-lg font-semibold rounded-xl text-gray-200 bg-[#23272a] hover:bg-[#2d2f31] text-center transition-all duration-150"
                 href="#"
@@ -107,6 +125,13 @@ export const AppBar: FC = () => {
               <hr className="w-3/4 border-zinc-700 my-2" />
               <Link
                 className="w-full py-2 text-base font-semibold rounded-xl text-gray-700 bg-gray-200 bg-opacity-20 hover:bg-gray-300 hover:bg-opacity-30 text-center transition-all duration-150 whitespace-nowrap"
+                href="/myrewards"
+                onClick={() => setIsNavOpen(false)}
+              >
+                MyRewards
+              </Link>
+              <Link
+                className="w-full py-2 text-base font-semibold rounded-xl text-gray-700 bg-gray-200 bg-opacity-20 hover:bg-gray-300 hover:bg-opacity-30 text-center transition-all duration-150 whitespace-nowrap"
                 href="/mywifipass"
                 onClick={() => setIsNavOpen(false)}
               >
@@ -114,18 +139,11 @@ export const AppBar: FC = () => {
               </Link>
               <Link
                 className="w-full py-2 text-base font-semibold rounded-xl text-gray-700 bg-gray-200 bg-opacity-20 hover:bg-gray-300 hover:bg-opacity-30 text-center transition-all duration-150 whitespace-nowrap"
-                href="/myrewards"
+                href="/provision"
                 onClick={() => setIsNavOpen(false)}
               >
-                MyRewards
+                Provisioning
               </Link>
-              <a
-                className="w-full py-2 text-base font-semibold rounded-xl text-gray-700 bg-gray-200 bg-opacity-20 hover:bg-gray-300 hover:bg-opacity-30 text-center transition-all duration-150 whitespace-nowrap"
-                href="#"
-                onClick={() => setIsNavOpen(false)}
-              >
-                MyGSim
-              </a>
             </nav>
           </div>
         </div>

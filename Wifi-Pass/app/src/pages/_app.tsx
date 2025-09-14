@@ -1,6 +1,8 @@
+
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { FC } from 'react';
+import { ErrorBoundary } from '../components/ErrorBoundary';
 
 import { ContextProvider } from '../contexts/ContextProvider';
 import { AppBar } from '../components/AppBar';
@@ -12,22 +14,26 @@ import FloatingLogos from '../components/FloatingLogos';
 require('@solana/wallet-adapter-react-ui/styles.css');
 require('../styles/globals.css');
 
+
 const App: FC<AppProps> = ({ Component, pageProps }) => {
     return (
         <>
           <Head>
             <title>Dopelganga Lite</title>
           </Head>
+          {/* Keep Next.js dev overlay working: only catch render errors inside content */}
           <SolanaWalletProvider>
             <ContextProvider>
-              <div className="flex flex-col h-screen relative">
+              <div className="flex flex-col min-h-screen relative">
                 <FloatingLogos />
                 <Notifications />
                 <AppBar/>
                 <ContentContainer>
-                  <Component {...pageProps} />
-                  <Footer/>
+                  <ErrorBoundary>
+                    <Component {...pageProps} />
+                  </ErrorBoundary>
                 </ContentContainer>
+                <Footer/>
               </div>
             </ContextProvider>
           </SolanaWalletProvider>

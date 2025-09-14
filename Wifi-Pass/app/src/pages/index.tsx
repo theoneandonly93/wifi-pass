@@ -8,10 +8,10 @@ const Home: NextPage = (props) => {
   return (
     <div>
       <Head>
-        <title>Dopleganga</title>
+        <title>Dopelganga</title>
         <meta
           name="description"
-          content="Decentralized WiFi and Cellular Service by Dopleganga"
+          content="Decentralized WiFi and Cellular Service by Dopelganga"
         />
       </Head>
       <HomeView />

@@ -125,3 +125,20 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Dopelganga Additions
+
+This scaffold is extended for Dopelganga / GhostFi demo:
+
+- Coverage map with ZIP search, hotspot markers, and on-map hotspot registration (wallet required). All SSIDs: `Dopelganga.Fi`.
+- Plans page (Basic / Pro / Unlimited) with simulated purchase/activation flows.
+- Rewards dashboard with a daily UTC countdown timer and progress bar.
+- Simple in-memory backend API stubs:
+  - `GET /api/hotspots` and `POST /api/hotspots/register`
+  - `GET /api/rewards/next`, `GET /api/rewards/balance`, `POST /api/rewards/settle`
+  - `GET /api/provision/wifi` (Wi‑Fi QR payload)
+  - `GET|POST /api/provision/esim` (activate/revoke mock eSIM)
+  - `GET /api/creator/gsim` (lifetime creator gSim profile)
+- Provisioning page to view Wi‑Fi QR payload and manage gSim activation.
+
+Notes: These endpoints use an in‑memory store in `src/lib/db.ts` for local development and demo only. Replace with Postgres and on‑chain calls for production.

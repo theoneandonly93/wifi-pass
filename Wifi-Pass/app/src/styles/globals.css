@@ -14,6 +14,11 @@ body {
   color: #f3f3f3;
 }
 
+/* Smooth scroll for a clean paging feel */
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   color: inherit;
   text-decoration: none;

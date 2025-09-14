@@ -26,13 +26,13 @@ export const HomeView: FC = ({ }) => {
         <div className="mt-10 max-w-2xl w-full bg-black bg-opacity-90 shadow-2xl rounded-3xl p-12 flex flex-col items-center">
           <div className='text-sm font-normal align-bottom text-right text-slate-600 w-full mb-2'>v{pkg.version}</div>
           <h1 className="text-center text-5xl font-extrabold text-white mb-4 tracking-widest">
-            Dopleganga
+            Dopelganga
           </h1>
           <h3 className="text-center text-2xl font-semibold text-gray-300 mb-6">
             Decentralized WiFi & Cellular Service
           </h3>
           <p className="text-center text-lg text-slate-400 mb-8">
-            Welcome to Dopleganga! Access, manage, and share decentralized wireless passes and gSIMs. Instantly connect to the future of wireless freedom.
+            Welcome to Dopelganga! Access, manage, and share decentralized wireless passes and GhostSim (gSim). Instantly connect to the future of wireless freedom.
           </p>
           <button
             className="btn btn-primary btn-lg bg-gray-700 text-white hover:bg-gray-600 transform hover:scale-110 transition-all"
@@ -46,6 +46,15 @@ export const HomeView: FC = ({ }) => {
           >
             Find a Hotspot
           </button>
+        </div>
+        {/* Phone image, 1 inch (24px) below the card holder and 1 inch (24px) above the footer */}
+        <div style={{ marginTop: 24, marginBottom: 24 }} className="flex items-center justify-center w-full">
+          <img
+            src="/wifi.png"
+            alt="Smartphone Wi‑Fi Settings Overview"
+            className="block max-w-[90vw] sm:max-w-[60vw] md:max-w-[480px] h-auto object-contain"
+            loading="lazy"
+          />
         </div>
       </div>
     </div>
