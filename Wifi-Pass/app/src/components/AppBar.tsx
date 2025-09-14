@@ -56,6 +56,12 @@ export const AppBar: FC = () => {
           MyWifiPass
         </Link>
         <Link
+          href="/pitch-deck"
+          className="px-3 py-1 rounded-lg bg-gradient-to-r from-purple-600 to-blue-500 text-white hover:from-purple-700 hover:to-blue-600 text-base font-semibold tracking-wide transition-all duration-150 whitespace-nowrap"
+        >
+          Pitch Deck
+        </Link>
+        <Link
           href="/provision"
           className="px-3 py-1 rounded-lg bg-gray-200 bg-opacity-20 text-gray-700 hover:bg-gray-300 hover:bg-opacity-30 text-base font-semibold tracking-wide transition-all duration-150 whitespace-nowrap"
         >
@@ -136,6 +142,13 @@ export const AppBar: FC = () => {
                 onClick={() => setIsNavOpen(false)}
               >
                 MyWifiPass
+              </Link>
+              <Link
+                className="w-full py-2 text-lg font-semibold rounded-xl text-white bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-center transition-all duration-150"
+                href="/pitch-deck"
+                onClick={() => setIsNavOpen(false)}
+              >
+                Pitch Deck
               </Link>
               <Link
                 className="w-full py-2 text-base font-semibold rounded-xl text-gray-700 bg-gray-200 bg-opacity-20 hover:bg-gray-300 hover:bg-opacity-30 text-center transition-all duration-150 whitespace-nowrap"
