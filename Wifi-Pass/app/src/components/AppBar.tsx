@@ -27,43 +27,43 @@ export const AppBar: FC = () => {
       <div className="flex-1 justify-center items-center gap-4 sm:gap-6 hidden sm:flex">
         <Link
           href="/coverage"
-          className="px-3 py-1 rounded-lg bg-gray-200 bg-opacity-20 text-gray-700 hover:bg-gray-300 hover:bg-opacity-30 text-base font-semibold tracking-wide transition-all duration-150 whitespace-nowrap"
+          className="px-3 py-1 rounded-lg text-white text-base font-semibold tracking-wide transition-all duration-150 whitespace-nowrap hover:underline"
         >
           Coverage
         </Link>
         <Link
           href="/hotspots"
-          className="px-3 py-1 rounded-lg bg-gray-200 bg-opacity-20 text-gray-700 hover:bg-gray-300 hover:bg-opacity-30 text-base font-semibold tracking-wide transition-all duration-150 whitespace-nowrap"
+          className="px-3 py-1 rounded-lg bg-gray-700 text-white hover:bg-gray-800 text-base font-semibold tracking-wide transition-all duration-150 whitespace-nowrap"
         >
           Hotspots
         </Link>
         <Link
           href="/passes"
-          className="px-3 py-1 rounded-lg bg-gray-200 bg-opacity-20 text-gray-700 hover:bg-gray-300 hover:bg-opacity-30 text-base font-semibold tracking-wide transition-all duration-150 whitespace-nowrap"
+          className="px-3 py-1 rounded-lg bg-gray-700 text-white hover:bg-gray-800 text-base font-semibold tracking-wide transition-all duration-150 whitespace-nowrap"
         >
           Plans
         </Link>
         <Link
           href="/myrewards"
-          className="px-3 py-1 rounded-lg bg-gray-200 bg-opacity-20 text-gray-700 hover:bg-gray-300 hover:bg-opacity-30 text-base font-semibold tracking-wide transition-all duration-150 whitespace-nowrap"
+          className="px-3 py-1 rounded-lg bg-gray-700 text-white hover:bg-gray-800 text-base font-semibold tracking-wide transition-all duration-150 whitespace-nowrap"
         >
           MyRewards
         </Link>
         <Link
           href="/mywifipass"
-          className="px-3 py-1 rounded-lg bg-gray-200 bg-opacity-20 text-gray-700 hover:bg-gray-300 hover:bg-opacity-30 text-base font-semibold tracking-wide transition-all duration-150 whitespace-nowrap"
+          className="px-3 py-1 rounded-lg bg-gray-700 text-white hover:bg-gray-800 text-base font-semibold tracking-wide transition-all duration-150 whitespace-nowrap"
         >
           MyWifiPass
         </Link>
         <Link
           href="/pitch-deck"
-          className="px-3 py-1 rounded-lg bg-gradient-to-r from-purple-600 to-blue-500 text-white hover:from-purple-700 hover:to-blue-600 text-base font-semibold tracking-wide transition-all duration-150 whitespace-nowrap"
+          className="px-3 py-1 rounded-lg bg-gray-700 text-white hover:bg-gray-800 text-base font-semibold tracking-wide transition-all duration-150 whitespace-nowrap"
         >
           Pitch Deck
         </Link>
         <Link
           href="/provision"
-          className="px-3 py-1 rounded-lg bg-gray-200 bg-opacity-20 text-gray-700 hover:bg-gray-300 hover:bg-opacity-30 text-base font-semibold tracking-wide transition-all duration-150 whitespace-nowrap"
+          className="px-3 py-1 rounded-lg bg-gray-700 text-white hover:bg-gray-800 text-base font-semibold tracking-wide transition-all duration-150 whitespace-nowrap"
         >
           Provisioning
         </Link>
@@ -101,57 +101,45 @@ export const AppBar: FC = () => {
             </button>
             <nav className="flex flex-col w-full items-center gap-3">
               <Link
-                className="w-full py-2 text-lg font-semibold rounded-xl text-gray-200 bg-[#23272a] hover:bg-[#2d2f31] text-center transition-all duration-150"
+                className="w-full py-2 text-lg font-semibold rounded-xl text-white text-center transition-all duration-150 hover:underline"
                 href="/coverage"
                 onClick={() => setIsNavOpen(false)}
               >
                 Coverage
               </Link>
-              <a
-                className="w-full py-2 text-lg font-semibold rounded-xl text-gray-200 bg-[#23272a] hover:bg-[#2d2f31] text-center transition-all duration-150"
-                href="#"
-                onClick={() => setIsNavOpen(false)}
-              >
-                Mobile (Expo)
-              </a>
+              {/* Mobile (Expo) tab removed */}
               <Link
-                className="w-full py-2 text-lg font-semibold rounded-xl text-gray-200 bg-[#23272a] hover:bg-[#2d2f31] text-center transition-all duration-150"
+                className="w-full py-2 text-lg font-semibold rounded-xl bg-gray-700 text-white hover:bg-gray-800 text-center transition-all duration-150"
                 href="/passes"
                 onClick={() => setIsNavOpen(false)}
               >
                 Plans
               </Link>
-              <a
-                className="w-full py-2 text-lg font-semibold rounded-xl text-gray-200 bg-[#23272a] hover:bg-[#2d2f31] text-center transition-all duration-150"
-                href="#"
-                onClick={() => setIsNavOpen(false)}
-              >
-                Rewards
-              </a>
+              {/* Rewards tab removed */}
               <hr className="w-3/4 border-zinc-700 my-2" />
               <Link
-                className="w-full py-2 text-base font-semibold rounded-xl text-gray-700 bg-gray-200 bg-opacity-20 hover:bg-gray-300 hover:bg-opacity-30 text-center transition-all duration-150 whitespace-nowrap"
+                className="w-full py-2 text-base font-semibold rounded-xl text-white text-center transition-all duration-150 whitespace-nowrap hover:underline"
                 href="/myrewards"
                 onClick={() => setIsNavOpen(false)}
               >
                 MyRewards
               </Link>
               <Link
-                className="w-full py-2 text-base font-semibold rounded-xl text-gray-700 bg-gray-200 bg-opacity-20 hover:bg-gray-300 hover:bg-opacity-30 text-center transition-all duration-150 whitespace-nowrap"
+                className="w-full py-2 text-base font-semibold rounded-xl bg-gray-700 text-white hover:bg-gray-800 text-center transition-all duration-150 whitespace-nowrap"
                 href="/mywifipass"
                 onClick={() => setIsNavOpen(false)}
               >
                 MyWifiPass
               </Link>
               <Link
-                className="w-full py-2 text-lg font-semibold rounded-xl text-white bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-center transition-all duration-150"
+                className="w-full py-2 text-lg font-semibold rounded-xl bg-gray-700 text-white hover:bg-gray-800 text-center transition-all duration-150"
                 href="/pitch-deck"
                 onClick={() => setIsNavOpen(false)}
               >
                 Pitch Deck
               </Link>
               <Link
-                className="w-full py-2 text-base font-semibold rounded-xl text-gray-700 bg-gray-200 bg-opacity-20 hover:bg-gray-300 hover:bg-opacity-30 text-center transition-all duration-150 whitespace-nowrap"
+                className="w-full py-2 text-base font-semibold rounded-xl bg-gray-700 text-white hover:bg-gray-800 text-center transition-all duration-150 whitespace-nowrap"
                 href="/provision"
                 onClick={() => setIsNavOpen(false)}
               >
